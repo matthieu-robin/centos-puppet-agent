@@ -9,4 +9,5 @@ RUN yum -y install wget git
 RUN rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 RUN yum -y install puppet
 RUN puppet resource package puppet ensure=latest
-RUN /etc/init.d/puppet restart
+RUN systemctl start puppet
+RUN systemctl enable puppet
