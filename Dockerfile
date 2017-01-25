@@ -12,5 +12,6 @@ RUN puppet resource package puppet ensure=latest
 
 # configure puppet Agent
 ADD /conf/puppet.conf /etc/puppet/puppet.conf
+
 RUN systemctl start puppet
 RUN systemctl enable puppet
