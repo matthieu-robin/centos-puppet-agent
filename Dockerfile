@@ -13,5 +13,7 @@ RUN puppet resource package puppet ensure=latest
 # configure puppet Agent
 ADD /conf/puppet.conf /etc/puppet/puppet.conf
 
-RUN sudo systemctl start puppet
-RUN sudo systemctl enable puppet
+#Start services and run scripts
+ADD /scripts/script.sh /tmp/script.sh
+RUN chmod +x /tmp/script.sh
+CMD ["/tmp/script.sh"]
