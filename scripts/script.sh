@@ -1,2 +1,1 @@
-service puppet start
-chkconfig puppet on
+systemctl start puppet
