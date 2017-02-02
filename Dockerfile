@@ -3,7 +3,7 @@ MAINTAINER matthieu-robin
 
 # Update CentOS
 RUN yum -y update
-RUN yum -y install wget git
+RUN yum -y install wget
 
 # Install puppet Agent
 RUN rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
