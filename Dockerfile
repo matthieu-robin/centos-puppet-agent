@@ -22,3 +22,5 @@ ADD /conf/index.html /var/www/html/
 ADD /scripts/script.sh /tmp/script.sh
 RUN chmod +x /tmp/script.sh
 CMD ["/tmp/script.sh"]
+
+EXPOSE 80
