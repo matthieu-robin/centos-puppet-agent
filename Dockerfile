@@ -15,6 +15,8 @@ ADD /conf/puppet.conf /etc/puppet/puppet.conf
 
 # install and configure apache for test purpose
 RUN yum -y install httpd
+ADD /conf/meetup.gif /var/www/html/
+ADD /conf/index.html /var/www/html/
 
 #Start services and run scripts
 ADD /scripts/script.sh /tmp/script.sh
