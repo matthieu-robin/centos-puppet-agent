@@ -13,6 +13,9 @@ RUN puppet resource package puppet ensure=latest
 # configure puppet Agent
 ADD /conf/puppet.conf /etc/puppet/puppet.conf
 
+# install and configure apache for test purpose
+RUN yum -y install httpd
+
 #Start services and run scripts
 ADD /scripts/script.sh /tmp/script.sh
 RUN chmod +x /tmp/script.sh
