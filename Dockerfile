@@ -5,11 +5,6 @@ MAINTAINER matthieu-robin
 RUN yum -y update
 RUN yum -y install wget
 
-# Install SNMP
-RUN yum -y install net-snmp*
-RUN rm /etc/snmp/snmpd.conf
-ADD /conf/snmpd.conf /etc/snmp/
-
 # Install puppet Agent
 RUN rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 RUN yum -y install puppet
