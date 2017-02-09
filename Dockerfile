@@ -8,7 +8,6 @@ RUN yum -y install wget
 # Install puppet Agent
 RUN rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 RUN yum -y install puppet
-RUN puppet resource package puppet ensure=latest
 
 # configure puppet Agent
 ADD /conf/puppet.conf /etc/puppet/puppet.conf
